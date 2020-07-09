@@ -1,0 +1,33 @@
+$espacios: (mt:margin-top,
+    mr:margin-right,
+    mb:margin-bottom,
+    ml:margin-left,
+    pt:padding-top,
+    pr:padding-right,
+    pb:padding-bottom,
+    pl:padding-left);
+
+
+@for $i from 6 through $baseEspacios {
+
+    @each $clave,
+    $valor in $espacios {
+        .#{$clave}-#{$i} {
+            #{$valor}: $i*$baseEspacios*1px;
+        }
+    }
+}
+
+
+$margenX:mx;
+
+@for $i from 6 through $baseEspacios {
+
+    @each $clave in $margenX {
+
+        .#{$clave}-#{$i} {
+            margin-left: $i*$baseEspacios*1px/2;
+            margin-right: $i*$baseEspacios*1px/2;
+        }
+    }
+}

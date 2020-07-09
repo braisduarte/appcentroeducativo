@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $fontBody;
+}
+
+ul,
+li {
+  list-style: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fontTitulos;
+  font-weight: 700;
+  color: $azulOscuro;
+}
+
+h1 {
+  font-size: $tipoBase*2;
+  margin: 0;
+}
+
+h2 {
+  font-size: $tipoBase*2;
+}
+
+h3 {
+  font-size: $tipoBase*1.5;
+}
+
+h4 {
+  font-size: $tipoBase*1.3;
+}
+
+p {
+  font-size: $tipoBase;
+  line-height: 1.5rem;
+  color: $gris;
+}

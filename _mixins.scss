@@ -1,0 +1,46 @@
+@mixin flex($jc: center, $ai: center, $fw: wrap, $fd: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $fw;
+  flex-direction: $fd;
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-align($posc:center) {
+  text-align: $posc;
+}
+
+@mixin caja($ancho: 100%, $alto: 100vh) {
+  width: $ancho;
+  min-height: $alto;
+}
+
+@mixin border($position:null, $tipo: solid, $tam: 1px, $color: #000) {
+  border#{$position}: $tipo $tam $color;
+}
+
+@mixin media($tam, $m: max) {
+  @media screen and (#{$m}-width:$tam) {
+    @content;
+  }
+}
+
+@mixin fondo($url, $posx: center, $posy: center) {
+  background: url($url) no-repeat $posx $posy / cover;
+}
+
+@mixin boton($fondo, $color: #fff) {
+  background: $fondo;
+  color: $color;
+  display: inline-block;
+}
+
+@mixin box-shadow($h, $v, $blur, $spread, $color) {
+  box-shadow: $h $v $blur $spread $color;
+}
